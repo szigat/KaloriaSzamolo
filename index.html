@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalória számoló</title>
+    <meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="style/jquery.mobile-1.3.2.min.css" />
+    <script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+	<div data-role="page" id="bmrPage" style="margin:3px">
+	<form>
+		<label for="flpSex">Neme:</label>
+		<select name="flpSex" id="flpSex" data-role="slider" data-mini="true">
+			<option value="0">Férfi</option>
+			<option value="1">Nő</option>
+		</select>
+		<label for="slctActivity">Életmód:</label>
+		<select name="slctActivity" id="slctActivity">
+			<option value="1.2">Ülő</option>
+			<option value="1.375">Enyhén aktív</option>
+			<option value="1.55">Közepesen aktív</option>
+			<option value="1.7">Nagyon aktív</option>
+			<option value="1.9">Rendkívül aktív</option>
+		</select>
+		<label for="tbxAge">Életkor:</label>
+		<input data-clear-btn="true" name="tbxAge" pattern="[0-9]*" id="tbxAge" value="0" type="number" />
+		<label for="tbxHeight">Magasság (cm):</label>
+		<input data-clear-btn="true" name="tbxHeight" pattern="[0-9]*" id="tbxHeight" value="0" type="number" />
+		<label for="tbxWeight">Testsúly (kg) :</label>
+		<input data-clear-btn="true" name="tbxWeight" pattern="[0-9]*" id="tbxWeight" value="0" type="number" />
+		<a href="#popupBasic" data-rel="popup" data-role="button" data-inline="true" data-position-to="window" data-transition="pop" onclick="Teszt();">Kiszámol</a>
+		<div data-role="popup" id="popupBasic">
+			<p>Az ajánlott napi kalória bevitele (kcal):</p>
+			<p id="optimalCaloryResult"></p>
+		</div>
+	</form>
+	<div>
+</body>
+</html>
